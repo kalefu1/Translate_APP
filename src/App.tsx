@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   ArrowRight, Check, Clipboard, Copy, Eraser, Languages, LoaderCircle,
-  RotateCcw, Settings2, Shield, Square, WandSparkles
+  RotateCcw, Settings2, Square, WandSparkles
 } from "lucide-react";
 import { SettingsModal } from "./components/SettingsModal";
 import { ResultView } from "./components/ResultView";
@@ -114,7 +114,6 @@ export default function App() {
           <span className="brand-mark"><Languages size={20} /></span>
           <span><strong>译界</strong><small>Context Zero Translator</small></span>
         </a>
-        <div className="privacy-pill"><Shield size={14} /><span>每次输入独立处理 · 不保存历史</span></div>
         <div className="top-actions">
           {profiles.filter((x) => x.verified).length > 1 && (
             <select className="model-select" value={defaultId} onChange={(e) => { setDefaultId(e.target.value); saveDefaultProfileId(e.target.value); }} aria-label="当前模型">
@@ -188,7 +187,7 @@ export default function App() {
           </section>
         </div>
 
-        <footer className="page-footer"><span>当前模型：{activeProfile?.name ?? "未配置"}</span><span>输入与结果不会写入本地存储</span></footer>
+        <footer className="page-footer"><span>当前模型：{activeProfile?.name ?? "未配置"}</span></footer>
       </main>
 
       <SettingsModal open={settingsOpen} profiles={profiles} defaultId={defaultId} onClose={() => setSettingsOpen(false)} onSave={saveSettings} />

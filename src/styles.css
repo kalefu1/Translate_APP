@@ -32,7 +32,6 @@ button:disabled { cursor: not-allowed; opacity: 0.46; }
 .brand > span:last-child { display: grid; line-height: 1.05; }
 .brand strong { font-size: 17px; letter-spacing: 0.08em; }
 .brand small { margin-top: 5px; color: var(--muted); font-size: 9px; letter-spacing: 0.09em; text-transform: uppercase; }
-.privacy-pill { display: flex; align-items: center; gap: 7px; padding: 8px 13px; color: #37634d; background: var(--mint); border-radius: 999px; font-size: 12px; font-weight: 600; }
 .top-actions { display: flex; gap: 9px; align-items: center; }
 .settings-button, .model-select { height: 38px; border: 1px solid #d6dad2; border-radius: 10px; color: var(--ink); background: rgba(255, 255, 252, 0.8); }
 .settings-button { padding: 0 14px; display: flex; align-items: center; gap: 7px; font-weight: 600; }
@@ -166,7 +165,6 @@ textarea::placeholder { color: #b0b5af; }
 
 @media (max-width: 850px) {
   .topbar { height: 66px; padding: 0 18px; }
-  .privacy-pill { display: none; }
   .settings-button span { display: none; }
   .workspace { width: min(100% - 28px, 720px); padding-top: 39px; }
   .intro { margin-bottom: 24px; }
